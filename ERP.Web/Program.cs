@@ -46,7 +46,7 @@ using (var scope = app.Services.CreateScope())
             if (db.Database.GetPendingMigrations().Any())
             {
                 logger.LogInformation("Aplicando migraciones...");
-                db.Database.Migrate();
+                // db.Database.Migrate();
                 logger.LogInformation("Migraciones aplicadas exitosamente.");
             }
             else
